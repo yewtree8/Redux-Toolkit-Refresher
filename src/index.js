@@ -7,7 +7,9 @@ import { Provider } from 'react-redux';
 import userReducer from './features/user';
 
 const storeConfig = configureStore({
-  reducer : userReducer
+  reducer : {
+    user: userReducer,
+  }
 });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,4 +23,4 @@ root.render(
 );
 
 
-reportWebVitals();
+// reportWebVitals();
