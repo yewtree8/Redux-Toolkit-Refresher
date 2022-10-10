@@ -5,8 +5,10 @@ const Profile = () => {
 
   const user = useSelector((state) => state.user.value) // we called obj value
 
+  const themeColour = useSelector((state) => state.theme.value);
+
   return (
-    <div>
+    <div style={{color: themeColour}}>
         <h2>Profile Page</h2>
         <p>Name: {user.name}</p>
         <p>Age: {user.age}</p>
