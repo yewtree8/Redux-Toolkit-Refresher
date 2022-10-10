@@ -5,12 +5,14 @@ import {createSlice} from "@reduxjs/toolkit"
 
 export const userSlice = createSlice({
     name: "user",
-    initialState: { value: {  name: "M", age: "0", email: "test"  } },
+    initialState: { value: {  name: "Mat", age: 24, email: "test@email.com"  } },
     reducers: {
         login: (state, action) => {
             state.value = action.payload
         },
     }
 });
+
+export const { login } = userSlice.actions;
 
 export default userSlice.reducer;
